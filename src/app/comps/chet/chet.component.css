@@ -1,0 +1,306 @@
+.p-client{
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: Slack-Lato,appleLogo,sans-serif;
+    /* box-sizing: inherit; */
+    /* overflow: hidden; */
+    background: rgba(var(--sk_primary_background,255,255,255),1);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 38px auto min-content;
+    grid-template-areas: "p-client--iap1__top_nav" "p-client__workspace" "p-client__banners";
+}
+
+.p-top_nav{
+    background: #3F0E40;
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: Slack-Lato,appleLogo,sans-serif;
+    box-sizing: inherit;
+     grid-area: p-client--iap1__top_nav; 
+     min-width: 0;
+    -webkit-app-region: drag;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 203;
+    color: #D1D2D3;
+    box-shadow: 0 1px 0 0 rgba(209,210,211,0.1);
+} 
+
+    .p-top_nav__sidebar{
+        color: #D1D2D3;
+display: flex;
+align-items: center;
+padding-left: 16px;
+padding-right: 32px;
+flex: 1;
+min-width: 128px;
+justify-content: flex-end;
+    }
+
+.p-workspace-layout{
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: Slack-Lato,appleLogo,sans-serif;
+    box-sizing: inherit;
+    display: grid;
+    grid-template-rows: auto;
+    overflow: hidden;
+    position: relative;
+    grid-template-columns: 180px auto;
+    grid-template-areas: 'p-workspace__sidebar p-workspace__primary_view';
+}
+
+.p-workspace__sidebar{
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: Slack-Lato,appleLogo,sans-serif;
+    box-sizing: inherit;
+    grid-area: p-workspace__sidebar;
+    display: grid;
+    grid-template-columns: auto;
+    position: relative;
+    grid-template-areas: "p-workspace__channel_sidebar";
+    grid-template-rows: auto;
+    overflow: hidden;
+    width: 180px;
+    background: #3F0E40;
+    color: #FFFFFF;
+}
+
+.p-channel_sidebar__list{
+    -webkit-tap-highlight-color: transparent;
+--blue: #007bff;
+--indigo: #6610f2;
+--purple: #6f42c1;
+--pink: #e83e8c;
+--red: #dc3545;
+--orange: #fd7e14;
+--yellow: #ffc107;
+--green: #28a745;
+--teal: #20c997;
+--cyan: #17a2b8;
+--white: #fff;
+--gray: #6c757d;
+--gray-dark: #343a40;
+--primary: #007bff;
+--secondary: #6c757d;
+--success: #28a745;
+--info: #17a2b8;
+--warning: #ffc107;
+--danger: #dc3545;
+--light: #f8f9fa;
+--dark: #343a40;
+--breakpoint-xs: 0;
+--breakpoint-sm: 576px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 992px;
+--breakpoint-xl: 1200px;
+--font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+--font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+text-align: left;
+font-size: 15px;
+line-height: 1.46668;
+font-weight: 400;
+font-variant-ligatures: common-ligatures;
+-webkit-font-smoothing: antialiased;
+font-family: Slack-Lato,appleLogo,sans-serif;
+color: #FFFFFF;
+box-sizing: border-box;
+height: 755.361px;
+transform: translateY(0px);
+}
+
+.invite-frindes{
+    width: 70%;
+}
+
+
+
+.p-workspace__primary_view_contents{
+  
+    /* box-sizing: inherit; */
+    position: absolute;
+    width: 88%;
+    /* max-width: 650px; */
+    padding-bottom: 24px;
+    right: 10px;
+    left: 200px;
+    bottom: 0;
+    
+    
+}
+
+.c-virtual_list__scroll_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    
+}
+
+.p-file_drag_drop__container{
+    width: 100%;
+    top: 1120.7px;
+    
+}
+
+
+.c-message_kit__gutter{
+ 
+   
+    padding: 8px 20px;
+}
+
+.c-message_kit__gutter__left{
+    /* color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    user-select: text;
+     line-height: 1.46668; */
+     /* box-sizing: inherit;  */
+    flex-shrink: 1;
+    margin-right: 8px;
+    display: flex;
+}
+
+.button-gutter{
+    height: 35%;
+}
+
+.c-avatar__image{
+    /* user-select: text;
+    color: inherit;
+    font: inherit;
+    text-align: initial;
+    cursor: pointer; */
+    /* line-height: 36px; */
+    /* box-sizing: inherit; */
+    border-radius: 3px;
+    display: block;
+    height: 100%;
+    width: 100%;
+
+}
+
+.c-message_kit__gutter__right{
+    user-select: text;
+    line-height: 1.46668;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px;
+    padding-left: 16px;
+    margin: -12px -8px -16px -16px;
+}
+
+.p-message_input_field{
+    margin: 0;
+    --saf-0: rgba(var(--sk_foreground_high_solid,134,134,134),1);
+    border: 1px solid var(--saf-0);
+    position: relative;
+    padding-bottom: 48px;
+    background: rgba(var(--sk_primary_background,255,255,255),1);
+    border-radius: 4px;
+    border-width: 1px;
+    max-height: 70px;
+    min-width: 1px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-right: 10px;
+    flex: 1;
+    /* z-index: 200;
+    outline: none;
+    outline-offset: 0; */
+    /* border-color: rgba(var(--sk_foreground_max,29,28,29),.7); */
+}
+
+.ql-editor{
+    
+    -webkit-user-modify: read-write;
+    /* -webkit-line-break: after-white-space; */
+    unicode-bidi: -webkit-isolate;
+    cursor: text;
+    /* outline: none; */
+    text-align: right;
+    white-space: pre-wrap;
+    padding: 0;
+    font-variant-ligatures: none;
+    overflow: auto;
+    box-sizing: content-box;
+    tab-size: 8;
+    user-select: text;
+    /* height: auto; */
+    max-height: 45px;
+    width: auto;
+    line-height: 1.46668;
+    margin-top: 4px;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    padding-right: 9px;
+    min-height: 22px;
+    /* border-right: none; */
+    display: block;
+}
+
+.ql-placeholder{
+    direction: rtl;
+font-variant-ligatures: common-ligatures;
+-webkit-font-smoothing: antialiased;
+--saf-0: rgba(var(--sk_foreground_high_solid,134,134,134),1);
+font-family: Slack-Lato,appleLogo,sans-serif;
+/* box-sizing: inherit; */
+padding: 0;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+color: rgba(var(--sk_primary_foreground,29,28,29),1);
+filter: grayscale(100%);
+font-style: normal;
+max-height: 100%;
+opacity: .5;
+pointer-events: none;
+position: absolute;
+/* right: 8px; */
+/* font-size: 15px; */
+/* line-height: 1.46668; */
+ /* display: inline-flex;  */
+/* align-items: center;  */
+/* left: 550px; */
+/* top: 9px; */
+}
+
+.c-texty_input__placeholder{
+    direction: rtl;
+font-style: normal;
+pointer-events: none;
+line-height: 1.46668;
+box-sizing: inherit;
+display: flex;
+align-items: flex-end;
+/* display: block; */
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+}
+
+ 
+
+

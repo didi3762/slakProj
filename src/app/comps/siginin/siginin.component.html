@@ -1,0 +1,45 @@
+<div class="card-deck mb-3 text-center real_content heb">
+  <form class="form-signin" [formGroup]="formSign">
+
+    
+
+    <div class="text-center mb-4">
+      <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">{{formToS.headerS}}</h1>
+      <div *ngIf="formToS.showP">
+      <p >הכנס את שם המשתמש שלך </p>
+      <p >ו  <strong>כתובת מייל</strong> ו <strong>סיסמא</strong></p>
+    </div>
+    </div>
+
+    <div class="form-label-group">
+      <input id="inputName" type="text" class="form-control" formControlName="name" [placeholder]="formToS.placeHOW">
+      <label for="inputEmail">{{formToS.placeHOW}}</label>
+    </div>
+  
+    <div class="form-label-group">
+      <input #user type="email" id="inputEmail" class="form-control" formControlName="mail" placeholder="you@example.com"  required autofocus>
+      <label for="inputEmail">כתובת המייל שלך</label>
+    </div>
+  
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" class="form-control" formControlName="password" [placeholder]="formToS.placeHOP" required>
+      <label for="inputPassword">סיסמא</label>
+    </div>
+  
+    <!-- <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div> -->
+    <button class="btn btn-lg btn-primary btn-block btn-sigin" [disabled]="!formSign.valid" type="submit"
+     (click)='onSubmit(formToS.type)'
+     routerLink='/chet'
+     >{{formToS.bouttnP}}</button>
+   
+  </form>
+  </div>
+
+  <div class="heb" *ngIf="formToS.showP">
+     <p >עדיין איך לך חשבון סלאק?<a href="" [routerLink]="['/home/siginin/1']"> צור חשבון סלאק חדש</a></p>
+  </div>

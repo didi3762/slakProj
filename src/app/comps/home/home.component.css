@@ -1,0 +1,15 @@
+.page_contents{
+    font-size: 15px;
+line-height: 1.46668;
+font-weight: initial;
+color: #1d1c1d;
+font-variant-ligatures: common-ligatures;
+-webkit-font-smoothing: antialiased;
+font-family: Slack-Lato,appleLogo,sans-serif;
+box-sizing: inherit;
+margin: 0 auto;
+padding: 8rem 2rem;
+}
+
+
+

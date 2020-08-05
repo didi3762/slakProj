@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "slakproj"
+  },
+  "targets": {
+    "slakproj": {
+      "hosting": {
+        "slakProj": [
+          "slakproj"
+        ]
+      }
+    }
+  }
+}

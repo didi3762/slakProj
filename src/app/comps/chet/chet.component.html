@@ -1,0 +1,247 @@
+
+        <div class="p-client">
+            <div class="p-top_nav" role="navigation" aria-label="History and search" data-qa="top-nav">
+                <div class="p-top_nav__sidebar">
+                    <button class="c-button-unstyled p-top_nav__button p-top_nav__history_menu" type="button"
+                        aria-label="Show history" data-qa="top-nav-history-menu" delay="150" aria-haspopup="true"
+                        data-sk="tooltip_parent" aria-describedby="sk-tooltip-1"><i class="c-icon c-icon--clock-o"
+                            type="clock-o" aria-hidden="true"></i></button>
+                </div>
+                <button class="c-button-unstyled p-top_nav__search p-top_nav__search--windows" type="button"
+                    aria-label="Search" data-qa="top_nav_search"><i
+                        class="c-icon p-top_nav__search__icon c-icon--search-medium c-icon--inherit"
+                        type="search-medium" aria-hidden="true"></i>
+                    <span class="p-top_nav__search__text">Search AvraTech7</span></button>
+                <div class="p-top_nav__right">
+                    <div class="p-top_nav__windows_controls_container" data-qa="top-nav-help-button" delay="150"
+                        aria-haspopup="true" data-sk="tooltip_parent" aria-describedby="sk-tooltip-2">
+                        <button class="c-button-unstyled p-top_nav__button p-top_nav__help" type="button"
+                            aria-label="Help"><i class="c-icon c-icon--question-circle" type="question-circle"
+                                aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="p-workspace-layout" role="tabpanel" aria-label="AvraTech7">
+                <div class="p-workspace__sidebar">
+                        <div>
+                         <span class="p-ia__sidebar_header__user__name" *ngIf="userCorrentLocalStorge " >{{userCorrentLocalStorge.name}}</span>
+                        </div>
+                    <div>
+                        <nav class="p-channel_sidebar">
+                            <h1 id="channel_sidebar_aria_label" class="offscreen">{{timeString}}</h1>
+                            <div role="presentation"  >
+                                <button click='addPost()'>
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 1h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H4z"/>
+                                        <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"/>
+                                      </svg>
+                                </button> 
+                                <input #inviteFrindes class="invite-frindes" placeholder="הזמן חברים">
+                            </div> 
+
+
+                        <div class="p-channel_sidebar__list" *ngFor='let i of usersArr2'>
+                            
+                               
+                                    <span>{{i}}</span>
+                                    
+                        
+                                       
+
+                        </div>
+                        </nav>
+                    </div>
+                </div>
+            
+                
+                <div class="p-workspace__primary_view_contents">
+                    <!-- <div class="p-ia__view_header">
+                        <div class="p-ia__view_header__info">
+                            <div class="p-ia__view_header__title_and_channel_section">
+                                <div class="p-classic_nav__model__title__name p-classic_nav__no_drag"><button
+                                        class="c-button-unstyled p-classic_nav__model__title__name__button"
+                                        type="button" data-qa="channel_name" aria-haspopup="true"><i
+                                            class="c-icon c-presence c-presence--away c-icon--presence-offline c-icon--inline"
+                                            type="presence-offline" title="Away" aria-hidden="true"
+                                            data-qa="presence_indicator" data-qa-presence-self="false"
+                                            data-qa-presence-active="false" data-qa-presence-dnd="false"></i><span
+                                            class="p-classic_nav__model__title__name--dim">yehonatan</span></button>
+                                </div>
+                                <div class="p-channel_section_selector"><span><button
+                                            class="c-button-unstyled p-channel_section_selector__star" type="button"
+                                            data-qa="channel-header-star-button" delay="150"
+                                            data-sk="tooltip_parent" aria-describedby="sk-tooltip-4"><i
+                                                class="c-icon p-channel_section_selector__icon c-icon--star-o c-icon--inherit c-icon--inline"
+                                                type="star-o" aria-hidden="true"></i></button></span></div>
+                            </div>
+                            <div class="p-ia__view_header__metadata">
+                                <div data-qa="channel_header__title__info"
+                                    class="p-classic_nav__model__title__info p-classic_nav__no_drag"></div>
+                            </div>
+                        </div>
+                        <div class="p-ia__view_header__spacer"></div><button
+                            class="c-button-unstyled p-classic_nav__model__button p-classic_nav__model__button--calls"
+                            type="button" aria-label="[object Object]" aria-disabled="false"
+                            data-qa="channel_header_calls_button" delay="150" data-sk="tooltip_parent"
+                            aria-describedby="sk-tooltip-502">
+                            <div class="display_flex"><i
+                                    class="c-icon p-classic_nav__model__button__icon c-icon--phone" type="phone"
+                                    aria-hidden="true"></i></div>
+                        </button>
+                        <div class="p-ia__view_header__divider p-ia__view_header__divider--deprecated-spacing">
+                        </div><button
+                            class="c-button-unstyled p-ia__view_header__button p-ia__view_header__button--deprecated-spacing"
+                            type="outline" data-qa="channel-details"
+                            aria-label="Show details for conversation with @yehonatan" aria-expanded="false"
+                            delay="300" data-sk="tooltip_parent" aria-describedby="sk-tooltip-6"><i
+                                class="c-icon p-ia__view_header__button_icon c-icon--info-circle" type="info-circle"
+                                aria-hidden="true"></i> <span
+                                class="p-ia__view_header__button_text">Details</span></button>
+                    </div> -->
+
+                        
+
+                    <div class="c-virtual_list__scroll_container" role="presentation"> 
+                        <!-- <div class="c-virtual_list__item" > 
+                            <div class="p-message_pane__foreword">
+                                <div class="p-message_pane__foreword__avatars">
+                                    <button class="c-button-unstyled"
+                                        type="button"><button
+                                            data-member-id="U016YLXE9NX"
+                                            class="c-link--button c-unified_member c-unified_member--large"
+                                            type="button"><button
+                                                class="c-button-unstyled c-avatar c-avatar--interactive"
+                                                type="button"
+                                                aria-label="View yehonatan’s Profile"
+                                                tabindex="0"
+                                                style="height: 56px; line-height: 56px; width: 56px;"><img
+                                                    class="c-avatar__image"
+                                                    src="https://ca.slack-edge.com/TL18TV7R6-U016YLXE9NX-gcc26af105e6-72"
+                                                    srcset="https://ca.slack-edge.com/TL18TV7R6-U016YLXE9NX-gcc26af105e6-192 2x"
+                                                    alt=""></button>
+                                            <div
+                                                class="c-unified_member__flex-container--large">
+                                                <div class="c-unified_member__display-name c-unified_member__display-name--large"
+                                                    data-qa="large_unified_member_display_name">
+                                                    yehonatan<i
+                                                        class="c-icon c-presence c-presence--away c-icon--presence-offline c-icon--inline"
+                                                        type="presence-offline"
+                                                        title="Away"
+                                                        aria-hidden="true"
+                                                        data-qa="presence_indicator"
+                                                        data-qa-presence-self="false"
+                                                        data-qa-presence-active="false"
+                                                        data-qa-presence-dnd="false"></i>
+                                                </div>
+                                                <div
+                                                    class="c-unified_member__other-names c-unified_member__other-names--large">
+                                                    <span
+                                                        class="c-unified_member__secondary-name c-unified_member__secondary-name--large">yehonatan</span>
+                                                </div>
+                                            </div>
+                                        </button></button></div> -->
+                                <!-- <div class="p-message_pane__foreword__description"
+                                    data-qa="im_foreword_description">This is the
+                                    very beginning of your direct message history
+                                    with <span dir="ltr" delay="150"
+                                        data-sk="tooltip_parent"
+                                        aria-describedby="sk-tooltip-503"><a
+                                            class="c-link c-member_slug c-member_slug--light c-member_slug--link "
+                                            data-member-id="U016YLXE9NX"
+                                            data-member-label="@yehonatan"
+                                            data-stringify-type="mention"
+                                            data-stringify-id="U016YLXE9NX"
+                                            data-stringify-label="@yehonatan"
+                                            tabindex="0" aria-hidden="false"
+                                            aria-haspopup="true"
+                                            href="https://avratech7.slack.com/team/U016YLXE9NX"
+                                            rel="noopener noreferrer">@yehonatan</a></span>.
+                                    Only the two of you are in this conversation,
+                                    and no one else can join it. <a target="_blank"
+                                        class="c-link" rel="noopener noreferrer"
+                                        href="https://slack-redir.net/link?url=https%3A%2F%2Fget.slack.help%2Fhc%2Farticles%2F360002063088">Learn
+                                        more</a></div>
+                            </div>
+                        </div>  -->
+                        <!-- <div class="c-virtual_list__sticky_container">
+                            <div class="c-virtual_list__item--sticky">
+                                <div class="c-message_list__day_divider__label">
+                                    <button class="c-button-unstyled" type="button">Thursday,
+                                        July 23rd<i class="c-icon"type="chevron-down" aria-hidden="true"></i></button></div>
+                            </div>
+                        </div> --> 
+                        <div class="c-virtual_list__item" tabindex="-1"
+                            role="listitem" id="1595451600000divider"
+                            data-qa="virtual-list-item" style="top: 587px;">
+                            <div class="c-message_list__day_divider"
+                                data-stringify-ignore="true">
+                                <hr class="c-message_list__day_divider__line"
+                                    data-stringify-ignore="true">
+                            </div>
+                        </div>
+                        <div class="c-virtual_list__item" tabindex="-1">
+                            <div class="c-message_kit__background">
+                                <div role="document" class="c-message_kit__hover">
+                                    <div class="c-message_kit__actions">
+                                        <div class="c-message_kit__gutter">
+                                            <div class="c-message_kit__gutter__left">
+                                                <button class="button-gutter" type="button" aria-hidden="true" tabindex="-1" aria-haspopup="true" >
+                                                    <img class="c-avatar__image"
+                                                        src="https://ca.slack-edge.com/TL18TV7R6-U016YLXE9NX-gcc26af105e6-48"
+                                                        srcset="https://ca.slack-edge.com/TL18TV7R6-U016YLXE9NX-gcc26af105e6-72 2x"
+                                                        alt="">
+                                                </button>
+                                            </div>
+                                            <div class="c-message_kit__gutter__right" *ngFor='let item of postArr2'>
+                                                <span class="c-message__sender">
+                                                    <a href="/team/U016YLXE9NX" *ngIf="userCorrentLocalStorge ">{{userCorrentLocalStorge.name}}</a>
+                                                </span>
+                                                &nbsp;&nbsp;
+                                                <span class="c-timestamp__label">{{item.createTime}}</span><br>
+                                                <div class="c-files_container">
+                                                    <div class="c-message_kit__file__meta">
+                                                        <span class="c-message_kit__file__meta__text" *ngIf="userCorrentLocalStorge ">{{userCorrentLocalStorge.name}}</span>
+                                                        &nbsp;
+                                                        <button class="c-button-unstyled" type="button">
+                                                            <i class="c-icon" type="caret-down"aria-hidden="true"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="c-pillow_file">
+                                                            <div  class="c-pillow_file__description" *ngFor="let i of item.messeges">
+                                                                <span class="c-pillow_file__title" dir="auto">{{i}}</span>
+                                                            </div>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        
+                    <footer class="workspace__primary_view_footer">
+                        <div class="p-message_pane_input">
+                            <div class="p-message_pane_input_inner">
+                                <div class="p-workspace__input">
+                                    <div class="c-texty_input__container">
+                                        <div class="p-message_input_field" >
+                                            <input #message  class="ql-editor" contenteditable="true" dir="auto" role="textbox"tabindex="0" (keyup.enter)="addMessage(message.value)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+ 
+              
+              
+            </div>
+       
+        </div>
